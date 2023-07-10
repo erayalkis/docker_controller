@@ -22,10 +22,10 @@ fn main() {
 
                 match cmd.success() {
                     true => {
-                        rouille::Response::text("success")
+                        rouille::Response::text("success").with_status_code(200)
                     }
                     false => {
-                        rouille::Response::text("error")
+                        rouille::Response::text("error").with_status_code(500)
                     }
                 }
             },
@@ -39,10 +39,10 @@ fn main() {
 
                 match cmd.success() {
                     true => {
-                        rouille::Response::text("success")
+                        rouille::Response::text("success").with_status_code(200)
                     }
                     false => {
-                        rouille::Response::text("error")
+                        rouille::Response::text("error").with_status_code(500)
                     }
                 }
             },
